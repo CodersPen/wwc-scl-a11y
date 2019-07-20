@@ -134,14 +134,337 @@
                 </p>                
             </section>
         </article>
-    
-        <h3>Formularios</h3>
-    
-        <h4>Campos, nombres y etiquetas</h4>
 
-        <h4>Feedback visual de cursor</h4>
+        <article class="examples-group">
+            <header class="row">
+                <h3 class="col-xs-12">Formularios</h3>
+            </header>
+
+            <section>
+                <header class="row">
+                    <h4>Campos agrupados, etiquetas</h4>
+                </header>
+
+                <section class="row example">
+                    <h5 class="col-xs-12">Campos y grupos</h5>
+
+                    <p class="col-xs-12 example-explanation">Los campos que guardan relación se agrupan bajo un elemento <em class="inline-code">fieldset</em> y se usa un elemento <em class="inline-code">&lt;legend&gt;</em> para indicar información y contexto adicional sobre esta agrupación de campos.</p>
+
+                    <p class="col-xs-12 example-explanation">
+                        Cada campo individual junto con su etiqueta descriptiva están agrupados bajo un elemento <em class="inlinde-code">fieldset</em>
+                    </p>
+
+                    <p class="col-xs-12 example">No Accesible</p>
+
+                    <section>
+                        <form action="#" class="col-xs-6 example">
+                            <div>
+                                <p>Suscripción al newsletter</p>
+                            </div>
+                            <div>
+                                <label for="examples-form-newsletter-1-email">Email</label>
+                                <input type="email" name="email">
+                            </div>
+                            <div>
+                                <p>Deseo suscribirme a</p>
+                                <div>
+                                    <label for="examples-form-newsletter-1-option-promotions">
+                                        <input type="checkbox"
+                                                name="newsletter-option"
+                                                id="examples-form-newsletter-1-option-promotions"
+                                                value="promotions">
+                                        Promociones
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="examples-form-newsletter-1-option-promotions">
+                                        <input type="checkbox"
+                                                name="newsletter-option"
+                                                id="examples-form-newsletter-1-option-new-articles"
+                                                value="new-articles">
+                                        Nuevos Artículos
+                                    </label>
+                                </div>
+                                
+                                <div>
+                                    <label for="examples-form-newsletter-1-option-promotions">
+                                        <input type="checkbox"
+                                                name="newsletter-option"
+                                                id="examples-form-newsletter-1-option-new-videos"
+                                                value="new-videos">
+                                        Nuevos Videos
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit">Suscribirme</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <p class="col-xs-12">Accesible</p>
+
+                    <section>
+                        <form action="#" class="col-xs-9 example">
+                            <fieldset>
+                                <legend>Suscripción al newsletter</legend>
+                                <fieldset>
+                                    <label for="examples-form-newsletter-1-email">Email</label>
+                                    <input type="email" name="email">                                    
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Deseo suscribirme a</legend>
+                                    <fieldset>
+                                        <label for="examples-form-newsletter-1-option-promotions">
+                                            <input type="checkbox"
+                                                    name="newsletter-option"
+                                                    id="examples-form-newsletter-1-option-promotions"
+                                                    value="promotions">
+                                            Promociones
+                                        </label>
+                                    </fieldset>
     
-        <h4>Errores y validación</h4>
+                                    <fieldset>
+                                        <label for="examples-form-newsletter-1-option-promotions">
+                                            <input type="checkbox"
+                                                    name="newsletter-option"
+                                                    id="examples-form-newsletter-1-option-new-articles"
+                                                    value="new-articles">
+                                            Nuevos Artículos
+                                        </label>
+                                    </fieldset>
+                                    
+                                    <fieldset>
+                                        <label for="examples-form-newsletter-1-option-promotions">
+                                            <input type="checkbox"
+                                                    name="newsletter-option"
+                                                    id="examples-form-newsletter-1-option-new-videos"
+                                                    value="new-videos">
+                                            Nuevos Videos
+                                        </label>
+                                    </fieldset>
+                                </fieldset>
+                                <fieldset>
+                                    <button type="submit">Suscribirme</button>   
+                                </fieldset>                                
+                            </fieldset>
+                        </form>
+                    </section>                    
+                </section>            
+
+                <section class="row example">
+                    <h5 class="col-xs-12">Campos y etiquetas</h5>
+
+                    <p class="col-xs-12 example-explanation">Todos los campos de un formulario deben estar correctamente etiquetados, asociándolos a un elemento <em class="inline-code">&lt;label&gt;</em> de forma semántica a través de su atributo <em class="inline-code">id</em> o usando un mecanismo como el atributo ARIA <em class="inline-code">label</em> o <em class="inline-code">labelledBy</em></p>
+
+                    <p class="col-xs-12 example">No Accesible</p>
+
+                    <section class="col-xs-12">
+                        <form action="#" class="col-xs-9 example">
+                            <legend>Formulario de Registro</legend>
+                            <fieldset>
+                                <label>Nombre</label>
+                                <input type="text" name="name">
+                            </fieldset>
+                            <fieldset>
+                                <label>Apellido</label>
+                                <input type="text" name="lastname">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Género</legend>
+                                <input type="radio" name="gender" value="female">
+                                <label>Femenino</label>                                
+
+                                <input type="radio" name="gender" value="male">
+                                <label>Masculino</label>
+                                
+                            </fieldset>
+                            <fieldset>
+                                <button type="submit">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </section>
+
+                    <section class="col-xs-12">
+                        <form action="#" class="col-xs-9 example">
+                            <legend>Búsqueda de Videos</legend>
+                            <fieldset>
+                                <input type="text" name="searchtext" aria-label="Buscar">
+                                <button type="submit">Buscar</button>
+                            </fieldset>
+                        </form>
+                    </section>
+
+
+                    <p class="col-xs-12 example">Accesible</p>
+
+                    <section class="col-xs-12">
+                        <p class="col-xs-12 example">Asociando labels</p>
+                
+                        <form action="#" class="col-xs-9 example">
+                            <fieldset>
+                                <label for="examples-form-signup-1-name">Nombre</label>
+                                <input type="text" id="examples-form-signup-1-name" name="name">
+                            </fieldset>
+                            <fieldset>
+                                <label for="examples-form-signup-1-last-name">Apellido</label>
+                                <input type="text" id="examples-form-signup-1-last-name" name="lastname">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Género</legend>
+                                <input type="radio" id="examples-form-signup-1-gender-female" name="gender" value="female">
+                                <label for="examples-form-signup-1-gender-female">Femenino</label>
+    
+                                <input type="radio" id="examples-form-signup-1-gender-male" name="gender" value="male">
+                                <label for="examples-form-signup-1-gender-female">Masculino</label>
+                            </fieldset>
+                            <fieldset>
+                                <button type="submit">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </section>
+
+
+                    <section class="col-xs-12">
+                        <p class="col-xs-12 example">Usando atributo ARIA label</p>
+
+                        <form action="#" class="col-xs-9 example">
+                            <fieldset>
+                                <input type="text" name="searchtext" aria-label="Buscar">
+                                <button type="submit">Buscar</button>
+                            </fieldset>
+                        </form>
+                    </section>    
+
+                    <section class="col-xs-12">
+                        <p class="col-xs-12 example">Usando atributo ARIA labelledBy</p>
+
+                        <form action="#" class="col-xs-9 example">
+                            <fieldset>
+                                <input type="text" name="searchtext" aria-labelledby="examples-form-search-1-submit">
+                                <button id="examples-form-search-1-submit" type="submit">Buscar</button>
+                            </fieldset>
+                        </form>
+                    </section>
+                </section>
+            </section>
+
+            <section>
+                <header class="row">
+                    <h4 class="col-xs-12">Validación, instrucciones, manejo de errores</h4>
+                </header>
+                
+                <section class="row example">
+                    <h5>Validación e instrucciones</h5>
+
+                    <p class="col-xs-12 example-explanation">Para indicar que un campo es obligatorio el atributo ARIA <em class="inline-code">required</em></p>
+
+                    <p class="col-xs-12 example-explanation">
+                        Adicionalmente, los campos de formularios deben proveer instrucciones claras que ayudan a completarlos correctamente, por ejemplo, usando etiquetas descriptivas que le indiquen al usuario el formato esperado para determinados campos
+                    </p>
+
+                    <section class="col-xs-12">
+                        <form action="#" class="col-xs-9">
+                            <fieldset>
+                                <legend>Formulario de Registro</legend>
+
+                                <fieldset class="block">
+                                    <label for="examples-form-signup-2-email">Email (name@domain.com)</label>
+                                    <input type="email" name="email" id="examples-form-signup-2-email" aria-required="true">
+                                </fieldset>
+
+                                <fieldset class="block">
+                                    <label for="examples-form-signup-2-name">Nombre</label>
+                                    <input type="text" name="name" id="examples-form-signup-2-name" aria-required="true">
+                                </fieldset>
+
+                                <fieldset class="block">
+                                    <label for="examples-form-signup-2-password">Contraseña (Mínimo 8 caracteres, 1 mayúscula, 1 número)</label>
+                                    <input type="password" name="name" id="examples-form-signup-2-password" aria-required="true">
+                                </fieldset> 
+                                
+                                <fieldset>
+                                    <button type="submit">Enviar</button>
+                                </fieldset>
+                            </fieldset>
+                        </form>
+                    </section>
+                </section>
+
+                <section class="row example">
+                    <h5>Manejo de errores</h5>
+
+                    <p class="col-xs-12 example-explanation">Se debe informar al usuario de cualquier error en los campos, a través del atributo <em class="inline-code">aria-invalid</em>, colocando el foco del cursor en el primer campo que tenga un fallo</p>
+
+                    <p class="col-xs-12 example-explanation">Adicionalmente podemos agregar una alerta descriptiva al inicio del formulario, que liste todos los errores encontrados, y colocar el foco en este elemento</p>
+
+                    <p id="sign-up-form-3-alert" class="alert" role="alert" aria-hidden="true" tabindex="0"></p>
+                    <form id="sign-up-form-3" action="#" class="col-xs-9">
+                        <fieldset>
+                            <legend>Formulario de Registro</legend>
+
+                            <fieldset class="block">
+                                <label for="examples-form-signup-3-email">Email (name@domain.com)</label>
+                                <input type="email" name="email" id="examples-form-signup-3-email" aria-required="true">
+                            </fieldset>
+
+                            <fieldset class="block">
+                                <label for="examples-form-signup-3-name">Nombre</label>
+                                <input type="text" name="name" id="examples-form-signup-3-name" aria-required="true">
+                            </fieldset>
+
+                            <fieldset class="block">
+                                <label for="examples-form-signup-3-password">Contraseña (Mínimo 8 caracteres, 1 mayúscula, 1 número)</label>
+                                <input type="password" name="name" id="examples-form-signup-3-password" aria-required="true">
+                            </fieldset>
+                            <fieldset>
+                                <button type="submit">Enviar</button>
+                            </fieldset>
+                        </fieldset>
+                    </form>
+                </section>
+            </section>            
+        </article>
+
+        <article class="examples-group">
+            <header class="row">
+                <h3>Widgets ARIA</h3>
+            </header>
+
+            <section class="row example">
+                <h4 class="col-xs-12">Contenido Colapsable</h4>
+                <p class="col-xs-12">Para presentarle contenido colapsable a las tecnologías asistivas utilizamos los atributos ARIA <em class="inline-code">expanded</em>, <em class="inline-code">hidden</em> y <em class="inline-code">controls</em> </p>
+    
+                <h5 class="col-xs-12">Colapsable de preguntas frecuentes</h5>
+                <ul id="aria-examples-accordion" class="col-xs-12 accordion">
+                    <li>
+                        <button id="accordion-button-1" aria-expanded="false" aria-controls="accordion-text-1">
+                            <span>Pregunta 1</span>
+                            <span class="more" aria-hidden="true">+</span>
+                            <span class="less" aria-hidden="true">-</span>
+                        </button>
+                        <span id="accordion-text-1" class="answer" aria-hidden="true" role="region" aria-labelledby="accordion-button-1">Respuesta 1 LOREM IPSUM DOLOR SIT AMET</span>
+                    </li>
+                    <li>
+                        <button id="accordion-button-2" aria-expanded="false" aria-controls="accordion-text-2">
+                            <span>Pregunta 2</span>
+                            <span class="more" aria-hidden="true">+</span>
+                            <span class="less" aria-hidden="true">-</span>
+                        </button>
+                        <span id="accordion-text-2" class="answer" aria-hidden="true" role="region" aria-labelledby="accordion-button-2">Respuesta 2 LOREM IPSUM DOLOR SIT AMET</span>
+                    </li>
+                    <li>
+                        <button id="accordion-button-3" aria-expanded="false" aria-controls="accordion-text-3">
+                            <span>Pregunta 3</span>
+                            <span class="more" aria-hidden="true">+</span>
+                            <span class="less" aria-hidden="true">-</span>
+                        </button>
+                        <span id="accordion-text-3" class="answer" aria-hidden="true" role="region" aria-labelledby="accordion-button-1">Respuesta 2 LOREM IPSUM DOLOR SIT AMET</span>
+                    </li>
+                </ul>
+            </section>            
+        </article>
     </main>
 </body>
 </html>

@@ -17,3 +17,27 @@
                     display: block
                 span.sub-example-title
                     display: block
+            form
+                fieldset.block        
+                    label
+                        display: block
+                    input
+                        display: block
+            [aria-hidden="true"]
+                display: none
+            [aria-hidden="false"]
+                display: block
+            ul#aria-examples-accordion
+                li
+                    button
+                        display: block
+                    button[aria-expanded="false"]
+                        span.more
+                            display: inline
+                        span.less
+                            display: none
+                    button[aria-expanded="true"]
+                        span.more
+                            display: none
+                        span.less
+                            display: inline
