@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Women Who Code - Accesibilidad</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Taller Accesibilidad Web</h1>
+    </header>
+
+    <main id="accessibility-examples" class="container">
+        <header class="row">
+            <h2 class="col-xs-12">Ejemplos: Elementos y Componentes Accesibles</h2>
+        </header>
+
+        <article class="examples-group">
+            <header class="row">
+                <h3 class="col-xs-12">Accesibilidad para Imágenes</h3>
+            </header>
+
+            <section class="row example">
+                <h4 class="col-xs-12">Imágenes que transmiten información sencilla</h4>
+                <p class="col-xs-12 example-explanation">
+                    Para toda imagen se debe proveer una descripción de texto alternativa, para esto usamos el atributo <em class="inline-code">alt</em>
+                </p>
+                <p class="col-xs-12">
+                    <span class="sub-example-title">Ejemplo No Accesible</span>
+                    <img src="images/cerro-santa-lucia.jpg">
+                </p>
+                <p class="col-xs-12">
+                    <span class="sub-example-title">Ejemplo accesible</span>
+                    <img src="images/cerro-santa-lucia.jpg" alt="Imagen del Cerro Santa Lucía">
+                </p>
+            </section>
+
+            <section class="row example">
+                <h4 class="col-xs-12">Imágenes que transmiten información compleja</h4>
+                <p class="col-xs-12 example-explanation">
+                    Para imágenes que proveen información muy amplia que no se puede transmitir usando un texto corto, nos apoyamos en los atributos ARIA <em class="inline-code">labelledBy</em> y <em class="inline-code">describedBy</em>
+                </p>
+                <p>
+                    <span class="sub-example-title">Ejemplo No Accesible</span>
+                    <img src="images/sales-chart.png">
+
+                    <span class="sub-example-title">Ejemplo Accesible</span>
+                    <img src="images/sales-chart.png"
+                            aria-labelledby="examples-images-heading-sales-chart"
+                            aria-describedby="examples-paragraph-sales-chart">                    
+                </p>
+                <h5 id="examples-images-heading-sales-chart">Ventas Proyectadas - Año 2019</h5>
+                <p id="examples-paragraph-sales-chart">La proyección de ventas del 2019 estimó que durante los primeros seis meses del año se tendrían ventas modestas, por debajo de los 180.000 dólares y que estos numeros mejoraría a partir del mes de julio donde las ventas sobrepasarían los 200.000 dólares, presentando un crecimiento mensual bastante acelerado, vendiendo 280.000 dólares en agosto, 450.000 dólares en septiembre, 460.000 dólares en octubre, 1 millón de dólares en noviembre; para cerrar el año con un estimado de ventas de 1.500.000 dólares en diciembre</p>
+            </section>
+        </article>
+
+        <article class="examples-group">
+            <header class="row">
+                <h3 class="col-xs-12">Accesibilidad en Hipervínculos</h3>
+            </header>
+
+            <section class="row-example">
+                <h4 class="col-xs-12">Enlaces con texto</h4>
+                <p class=" col-xs-12 example-explanation">
+                    Los elementos de hipervínculo deben entregar una descripción concisa y clara sobre el destino hacia donde lleva el enalce, a través del texto interno del elemento <em class="inline-code">a</em>
+                </p>
+                
+                <p class="col-xs-12 example">No Accesible</p>
+
+                <p class="col-xs-12 example">
+                    Si quieres saber más haz click <a href="www.example.com">acá</a>
+                </p>
+
+                <p class="col-xs-12 example">
+                    <a href="www.example.com">www.example.com</a>                    
+                </p>
+
+                <p class="col-xs-12 example">Accesible</p>
+
+                <p class="col-xs-12 example">
+                    Si quieres saber más haz click <a href="www.example.com">acá</a>
+                </p>
+                
+                <p class="col-xs-12 example">
+                    <a href="www.example.com">Página de Inicio de Example Company</a>  
+                </p>
+            </section>
+
+            <section class="row-example">
+                <h4 class="col-xs-12">Enlaces que abren en una nueva pestaña o ventana</h4>
+                <p class="col-xs-12 example-explanation">Los hipervínculos que abren en una nueva ventana o pestaña deben informar de este comportamiento a través del atributo <em class="inline-code">title</em></p>
+                
+                <p class="col-xs-12 example">No Accesible</p>
+
+                <p class="col-xs-12 example">                    
+                    Puedes conocer más leyendo nuestros <a href="www.example.com" target="_blank">términos y condiciones</a>
+                </p>
+
+                <p class="col-xs-12 example">                    
+                    Si quieres saber más haz click <a href="www.example.com" target="_blank">acá</a>
+                </p>                
+
+                <p class="col-xs-12 example">Accesible</p>
+
+                <p class="col-xs-12 example">                    
+                    Puedes conocer más leyendo nuestros <a href="www.example.com" target="_blank">términos y condiciones <span class="sr-only">(abre en una pestaña nueva)</span></a>
+                </p>
+
+                <p class="col-xs-12 example">                    
+                    Si quieres saber más haz click <a href="www.example.com" target="_blank">acá <span class="sr-only">(example.com, abre en una pestaña nueva)</span></a>
+                </p>
+            </section>
+
+            <section class="row example">
+                <h4 class="col-xs-12">Enlaces con Imágenes</h4>
+
+                <p class="col-xs-12 example-explanation">Cuando tenemos enlaces que sólo tienen en su interior una imagen, nos apoyamos en el atributo <em class="inline-code">alt</em> del elemento <em class="inline-code">&lt;img&gt;</em> para proveer una alternativa de texto para el enlace</p>
+
+                <p class="col-xs-12 example">No Accesible</p>
+
+                <p class="col-xs-12 example">
+                    <a href="https://www.womenwhocode.com/santiago">
+                        <img src="images/WWCode_Santiago_Binary_New_Teal.png">
+                    </a>
+                </p>
+
+                <p class="col-xs-12 example">Accesible</p>
+
+                <p class="col-xs-12 example">
+                    <a href="https://www.womenwhocode.com/santiago">
+                        <img src="images/WWCode_Santiago_Binary_New_Teal.png" alt="Women Who Code - Santiago">
+                    </a>
+                </p>                
+            </section>
+        </article>
+    
+        <h3>Formularios</h3>
+    
+        <h4>Campos, nombres y etiquetas</h4>
+
+        <h4>Feedback visual de cursor</h4>
+    
+        <h4>Errores y validación</h4>
+    </main>
+</body>
+</html>
