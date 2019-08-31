@@ -48,7 +48,7 @@
                     <span class="sub-example-title">Ejemplo Accesible</span>
                     <img src="images/sales-chart.png"
                             aria-labelledby="examples-images-heading-sales-chart"
-                            aria-describedby="examples-paragraph-sales-chart">                    
+                            aria-describedby="examples-paragraph-sales-chart">
                 </p>
                 <h5 id="examples-images-heading-sales-chart">Ventas Proyectadas - Año 2019</h5>
                 <p id="examples-paragraph-sales-chart">La proyección de ventas del 2019 estimó que durante los primeros seis meses del año se tendrían ventas modestas, por debajo de los 180.000 dólares y que estos numeros mejoraría a partir del mes de julio donde las ventas sobrepasarían los 200.000 dólares, presentando un crecimiento mensual bastante acelerado, vendiendo 280.000 dólares en agosto, 450.000 dólares en septiembre, 460.000 dólares en octubre, 1 millón de dólares en noviembre; para cerrar el año con un estimado de ventas de 1.500.000 dólares en diciembre</p>
@@ -79,11 +79,11 @@
                 <p class="col-xs-12 example">Accesible</p>
 
                 <p class="col-xs-12 example">
-                    Si quieres saber más haz click <a href="www.example.com">acá</a>
+                    Si quieres saber más haz click <a href="www.example.com">acá <span class="sr-only">Link a example.com</span></a>
                 </p>
                 
                 <p class="col-xs-12 example">
-                    <a href="www.example.com">Página de Inicio de Example Company</a>  
+                    <a href="www.example.com">Página de Inicio de Example Company</a>
                 </p>
             </section>
 
@@ -121,7 +121,7 @@
 
                 <p class="col-xs-12 example">
                     <a href="https://www.womenwhocode.com/santiago">
-                        <img src="images/WWCode_Santiago_Binary_New_Teal.png">
+                        <img src="images/WWC Argentina.jpg">
                     </a>
                 </p>
 
@@ -129,7 +129,7 @@
 
                 <p class="col-xs-12 example">
                     <a href="https://www.womenwhocode.com/santiago">
-                        <img src="images/WWCode_Santiago_Binary_New_Teal.png" alt="Women Who Code - Santiago">
+                        <img src="images/WWC Argentina.jpg" alt="Women Who Code- Santiago">
                     </a>
                 </p>                
             </section>
@@ -168,7 +168,7 @@
                             <div>
                                 <p>Deseo suscribirme a</p>
                                 <div>
-                                    <label for="examples-form-newsletter-1-option-promotions">
+                                    <label>
                                         <input type="checkbox"
                                                 name="newsletter-option"
                                                 id="examples-form-newsletter-1-option-promotions"
@@ -178,7 +178,7 @@
                                 </div>
 
                                 <div>
-                                    <label for="examples-form-newsletter-1-option-promotions">
+                                    <label>
                                         <input type="checkbox"
                                                 name="newsletter-option"
                                                 id="examples-form-newsletter-1-option-new-articles"
@@ -188,7 +188,7 @@
                                 </div>
                                 
                                 <div>
-                                    <label for="examples-form-newsletter-1-option-promotions">
+                                    <label>
                                         <input type="checkbox"
                                                 name="newsletter-option"
                                                 id="examples-form-newsletter-1-option-new-videos"
@@ -226,7 +226,7 @@
                                     </fieldset>
     
                                     <fieldset>
-                                        <label for="examples-form-newsletter-1-option-promotions">
+                                        <label for="examples-form-newsletter-1-option-new-articles">
                                             <input type="checkbox"
                                                     name="newsletter-option"
                                                     id="examples-form-newsletter-1-option-new-articles"
@@ -236,7 +236,7 @@
                                     </fieldset>
                                     
                                     <fieldset>
-                                        <label for="examples-form-newsletter-1-option-promotions">
+                                        <label for="examples-form-newsletter-1-option-new-videos">
                                             <input type="checkbox"
                                                     name="newsletter-option"
                                                     id="examples-form-newsletter-1-option-new-videos"
@@ -290,7 +290,7 @@
                         <form action="#" class="col-xs-9 example">
                             <legend>Búsqueda de Videos</legend>
                             <fieldset>
-                                <input type="text" name="searchtext" aria-label="Buscar">
+                                <input type="text" name="searchtext">
                                 <button type="submit">Buscar</button>
                             </fieldset>
                         </form>
@@ -312,12 +312,12 @@
                                 <input type="text" id="examples-form-signup-1-last-name" name="lastname">
                             </fieldset>
                             <fieldset>
-                                <legend>Género</legend>
-                                <input type="radio" id="examples-form-signup-1-gender-female" name="gender" value="female">
+                                <legend id="examples-form-gender">Género</legend>
+                                <input type="radio" id="examples-form-signup-1-gender-female" name="gender" value="female" aria-describedby="examples-form-gender">
                                 <label for="examples-form-signup-1-gender-female">Femenino</label>
     
-                                <input type="radio" id="examples-form-signup-1-gender-male" name="gender" value="male">
-                                <label for="examples-form-signup-1-gender-female">Masculino</label>
+                                <input type="radio" id="examples-form-signup-1-gender-male" name="gender" value="male" aria-describedby="examples-form-gender">
+                                <label for="examples-form-signup-1-gender-male">Masculino</label>
                             </fieldset>
                             <fieldset>
                                 <button type="submit">Enviar</button>
@@ -331,7 +331,7 @@
 
                         <form action="#" class="col-xs-9 example">
                             <fieldset>
-                                <input type="text" name="searchtext" aria-label="Buscar">
+                                <input type="text" name="searchtext" aria-label="Ingresa tu búsqueda">
                                 <button type="submit">Buscar</button>
                             </fieldset>
                         </form>
@@ -370,8 +370,8 @@
                                 <legend>Formulario de Registro</legend>
 
                                 <fieldset class="block">
-                                    <label for="examples-form-signup-2-email">Email (name@domain.com)</label>
-                                    <input type="email" name="email" id="examples-form-signup-2-email" aria-required="true">
+                                    <label for="examples-form-signup-2-email">Email <span class="sr-only">(name@domain.com)</span></label>
+                                    <input type="email" name="email" id="examples-form-signup-2-email" aria-required="true" placeholder="name@domain.com">
                                 </fieldset>
 
                                 <fieldset class="block">
@@ -419,7 +419,7 @@
                                 <input type="password" name="name" id="examples-form-signup-3-password" aria-required="true">
                             </fieldset>
                             <fieldset>
-                                <button type="submit">Enviar</button>
+                                <button type="button">Enviar</button>
                             </fieldset>
                         </fieldset>
                     </form>

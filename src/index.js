@@ -2,10 +2,6 @@ const signUpForm3Alert = document.querySelector('#sign-up-form-3-alert')
 const signUpForm3Submit = document.querySelector('#sign-up-form-3')
 
 signUpForm3Submit.addEventListener('click', () => {
-    // TODO: Validación realmente dinámica
-    // TODO: Manejo de estilos de error por CSS
-    // TODO: Agregar ARIA invalid
-    // TODO: Eliminar ARIA invalid al empezar a escribir nuevamente
     signUpForm3Alert.innerHTML = 'Los campos de email, nombre y contraseña son obligatorios'
     signUpForm3Alert.focus()
 })
